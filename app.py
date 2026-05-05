@@ -67,6 +67,8 @@ if user_query:
                  f"If the answer isn't in the notes, say 'I don't have that in the vault yet, Jack.'"
     )
     st.write(response.text)
+ except Exception as e:
+    st.error(f"An error occurred: {e}")   
 
 
 
