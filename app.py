@@ -59,12 +59,11 @@ if user_query:
     client = genai.Client(api_key=st.secrets["GOOGLE_API_KEY"])
     
     try:
-    # Everything below here must be shifted to the right!
-    	response = client.models.generate_content(
-        model="gemini-1.5-flash",
-        contents=f"You are Jack's Personal Wisdom Assistant. Use these notes: {context}. "
-                 f"Answer the question: '{user_query}' as concisely as possible. "
-                 f"If the answer isn't in the notes, say 'I don't have that in the vault yet, Jack.'"
+        response = client.models.generate_content(
+        	model="gemini-1.5-flash",
+        	contents=f"You are Jack's Personal Wisdom Assistant. Use these notes: {context}. "
+                 	f"Answer the question: '{user_query}' as concisely as possible. "
+                 	f"If the answer isn't in the notes, say 'I don't have that in the vault yet, Jack.'"
     )
     st.write(response.text)
  except Exception as e:
