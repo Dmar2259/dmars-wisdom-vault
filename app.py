@@ -1,13 +1,11 @@
 import streamlit as st
-import from google import genai
+from google import genai
 import chromadb
 from chromadb.utils import embedding_functions
 
 # --- 1. CONFIGURATION ---
 # Replace with your actual key if it's not already there
-GEMINI_API_KEY = "AIzaSyDtE-R9RT72nvDtCi8VAyPyviVaR9DbNAM"
-genai.configure(api_key=GEMINI_API_KEY)
-
+client = genai.Client(api_key="AIzaSyDtE-R9RT72nvDtCi8VAyPyviVaR9DbNAM")
 # Connect to the database
 client = chromadb.PersistentClient(path="./wisdom_db")
 sentence_transformer_ef = embedding_functions.SentenceTransformerEmbeddingFunction(model_name="all-MiniLM-L6-v2")
