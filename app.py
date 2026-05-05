@@ -10,7 +10,7 @@ st.title("🧠 Dmar's Wisdom Vault")
 
 # 2. Securely get API Key and Sheet URL from Cloud Secrets
 genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
-model = genai.GenerativeModel('gemini-pro')
+model = genai.GenerativeModel('gemini-1.5-flash')
 
 # 3. Connect to Google Sheets
 conn = st.connection("gsheets", type=GSheetsConnection)
