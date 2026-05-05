@@ -76,7 +76,7 @@ st.write(response.text)
 
 
 @echo off
-title Dmar's Vault Engine
+st.title ("Dmar's Vault Engine")
 :: Use the exact name of the folder you see on your desktop
 cd /d "%USERPROFILE%\Desktop\Dmar's Wisdom Vault"
 streamlit run app.py
