@@ -5,3 +5,4 @@ streamlit
 google-genai
 chromadb
 protobuf==3.20.3
+sentence-transformers
