@@ -60,7 +60,7 @@ if user_query:
     
     try:
         response = client.models.generate_content(
-            model="gemini-1.5-flash",
+            model="models/gemini-1.5-flash"
             contents=f"You are Jack's Personal Wisdom Assistant. Use these notes: {context}. "
                      f"Answer the question: '{user_query}' as concisely as possible. "
                      f"If the answer isn't in the notes, say 'I don't have that in the vault yet, Jack.'"
