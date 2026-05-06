@@ -4,4 +4,4 @@
 streamlit
 google-genai
 chromadb
-protobuf==4.25.3
+protobuf==3.20.3
